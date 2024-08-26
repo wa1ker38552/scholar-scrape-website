@@ -1,0 +1,8 @@
+:root {
+    --background: black;
+    --text: rgb(241, 241, 241);
+}
+
+body {
+    font-family: "Geist Sans";
+}
