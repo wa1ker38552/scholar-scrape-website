@@ -3,12 +3,14 @@
     <head>
         <title>Scholary Scrape</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.0.3/600.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://lib.cadenchau.com/lib.css">
+        <link rel="stylesheet" href="styles/dark.css">
         <link rel="stylesheet" href="styles/style.css">
-        <scrpt src="https://lib.cadenchau.com/lib.js"></scrpt>
+        <script src="https://lib.cadenchau.com/lib.js"></script>
         <script src="script.js"></script>
         <script>
             window.history.scrollRestoration = 'manual' // reset scroll state on-load
@@ -27,11 +29,13 @@
                     dquery('#contact').scrollIntoView({behavior: 'smooth'})
                 })
             
+                renderTerminal()
             }
         </script>
     </head>
     <body>
         <div class="navigation centered-vertically">
+            <img src="image.png">
             <div class="centered-vertically navigation-right">
                 <a class="navigation-item" href="#home">Home</a>
                 <a class="navigation-item" href="#about">About</a>
@@ -39,6 +43,14 @@
             </div>
         </div>
         <div class="content centered-children" id="home">
+            <div class="terminal">
+                <div class="centered-vertically terminal-header">
+                    <div style="background: var(--accent-dark);"></div>
+                    <div style="background: var(--accent-secondary);"></div>
+                    <div style="background: var(--accent-primary);"></div>
+                </div>
+                <div id="terminalContent"></div>
+            </div>
             <div class="hero-text-container">
                 <h1><span class="secondary-font">Webscraping solutions</span> <span class="text-highlight secondary-font">designed for students</span></h1>
                 <div class="break"></div>

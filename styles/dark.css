@@ -1,0 +1,11 @@
+:root {
+    --background: black;
+    --background-accent: rgb(37, 37, 37);
+    --text: rgb(241, 241, 241);
+    --text-dim: rgba(255, 255, 255, 0.8);
+    --text-secondary: rgb(202, 202, 202);
+    --accent-primary: rgb(235, 155, 255);
+    --accent-secondary: rgb(183, 97, 204);
+    --accent-slight-dark: rgb(123, 64, 138);
+    --accent-dark: rgb(72, 39, 82);
+}

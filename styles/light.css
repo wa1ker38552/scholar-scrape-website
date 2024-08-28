@@ -1,0 +1,11 @@
+:root {
+    --background: white;
+    --background-accent: rgb(180, 180, 180);
+    --text: rgb(48, 48, 48);
+    --text-dim: rgb(92, 92, 92);
+    --text-secondary: rgb(134, 134, 134);    
+    --accent-primary: rgb(183, 97, 204);
+    --accent-secondary: rgb(123, 64, 138);
+    --accent-slight-dark: rgb(183, 97, 204);
+    --accent-dark: rgb(245, 203, 255);
+}
