@@ -63,11 +63,21 @@ button:hover {
     box-sizing: border-box;
     width: 100vw;
     z-index: 9999;
+    gap: 0.5rem;
+}
+
+.navigation h2 {
+    font-family: "Inter" !important;
+    font-weight: 400;
 }
 
 .navigation img {
-    filter: brightness(0) invert(80%) sepia(62%) saturate(6531%) hue-rotate(243deg) brightness(86%) contrast(84%);
+    width: 2.3rem;
 }
+
+/*.navigation img {
+    filter: brightness(0) invert(80%) sepia(62%) saturate(6531%) hue-rotate(243deg) brightness(86%) contrast(84%);
+}*/
 
 .navigation-right {
     position: absolute;
@@ -87,10 +97,6 @@ button:hover {
 
 .navigation-item:hover {
     color: var(--text);
-}
-
-.navigation img {
-    width: 3rem;
 }
 
 .content {
