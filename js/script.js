@@ -16,6 +16,6 @@ async function renderTerminal() {
         website = random.choice(websites)
         parent.append(dcreate("div", "", `root:~# curl <span style='color: var(--accent-secondary)'>${website}</span>`))
         parent.scrollTop = parent.scrollHeight;
-        await wait(500)
+        await wait(100)
     }
 }
