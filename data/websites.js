@@ -1,4 +1,4 @@
-google.com
+const websites = `google.com
 facebook.com
 youtube.com
 baidu.com
@@ -163,4 +163,4 @@ detail.tmall.com
 google.nl
 forbes.com
 douban.com
-loading-delivery2.com
+loading-delivery2.com`.trim().split('\n')
