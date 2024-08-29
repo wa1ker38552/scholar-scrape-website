@@ -119,6 +119,12 @@ button:hover {
     background: radial-gradient(circle at bottom, var(--accent-dark) 5%, var(--background) 80%);
 }
 
+#home.content {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+}
+
 #about {
     background: radial-gradient(circle at top, var(--accent-dark) 5%, var(--background) 80%);
 }
@@ -211,11 +217,11 @@ button:hover {
 }
 
 #terminalContent {
-    height: 20rem;
+    height: 30rem;
     padding: 0.5rem;
     box-sizing: border-box;
     font-family: "Fira Code";
     font-size: 0.8rem;
     color: white;
-    overflow: auto;
+    overflow: hidden;
 }

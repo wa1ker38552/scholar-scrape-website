@@ -7,7 +7,6 @@ amazon.com
 wikipedia.org
 qq.com
 twitter.com
-slashdot.org
 google.co.in
 taobao.com
 live.com
@@ -36,7 +35,6 @@ mail.ru
 google.fr
 blogspot.com
 paypal.com
-onclickads.net
 google.com.br
 tumblr.com
 apple.com
@@ -45,7 +43,6 @@ aliexpress.com
 sohu.com
 microsoft.com
 imgur.com
-xvideos.com
 google.it
 imdb.com
 google.es
@@ -65,13 +62,10 @@ google.com.hk
 tianya.cn
 amazon.co.uk
 craigslist.org
-pornhub.com
 rakuten.co.jp
 naver.com
 blogger.com
-diply.com
 google.com.tr
-xhamster.com
 flipkart.com
 espn.go.com
 soso.com
@@ -84,9 +78,7 @@ dropbox.com
 google.co.kr
 googleusercontent.com
 github.com
-bongacams.com
 ebay.de
-kat.cr
 bbc.co.uk
 google.pl
 google.com.au
@@ -116,7 +108,6 @@ china.com
 dmm.co.jp
 china.com.cn
 chase.com
-xnxx.com
 buzzfeed.com
 google.com.sa
 huffingtonpost.com
@@ -157,7 +148,6 @@ ettoday.net
 amazon.it
 reimageplus.com
 quora.com
-redtube.com
 soundcloud.com
 detail.tmall.com
 google.nl
