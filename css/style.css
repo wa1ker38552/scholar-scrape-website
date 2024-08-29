@@ -144,7 +144,7 @@ button:hover {
     padding: 1rem;
     box-sizing: border-box;
     width: 15rem;
-    height: 8rem;
+    height: auto;
 }
 
 .blurb-item h4 {
