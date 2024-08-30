@@ -190,6 +190,10 @@ button:hover {
     font-weight: 300;
 }
 
+.contact-container input:focus, .contact-container textarea:focus {
+    border-color: var(--accent-secondary);
+}
+
 .label {
     color: var(--accent-slight-dark);
     font-size: 0.8rem;
@@ -234,4 +238,8 @@ button:hover {
     font-size: 0.8rem;
     color: white;
     overflow: hidden;
+}
+
+.hero-sub-container {
+
 }
