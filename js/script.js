@@ -7,8 +7,6 @@ async function renderTerminal() {
         // cors proxy
         const response = await fetch(`https://api.codetabs.com/v1/proxy?quest=${website}`)
         const text = await response.text()
-        console.log(text)
-
         const commandDiv = dcreate("div", "", `root:~# curl <span style='color: var(--accent-secondary); font-family: monospace;'>${website}</span>`)
 
         parent.append(commandDiv)
@@ -16,7 +14,7 @@ async function renderTerminal() {
         // Simulate typing effect
         let websiteContent = dcreate("pre")
         websiteContent.style.color = "var(--text-dim)"
-        websiteContent.style.fontFamily = "monospace"
+        websiteContent.style.fontFamily = "Fira Code"
         parent.append(websiteContent)
 
         parent.scrollTop = parent.scrollHeight
@@ -55,5 +53,32 @@ async function typeEffect(element, text, delay) {
         element.innerHTML += char;
         parent.scrollTop = parent.scrollHeight
         await time.sleep(delay);
+    }
+}
+
+async function renderTypewriter() {
+    const text = dquery("#typewriterText")
+    phrases = [
+        "students",
+        "researchers",
+        "interns"
+    ]
+
+    let i = 0
+    while (1) {
+        text.innerHTML = ""
+        word = phrases[i%3] // use mod instead of random to avoid succesive words
+        i++
+        for (const char of word) {
+            text.innerHTML += char
+            await time.sleep(50)
+        }
+        await time.sleep(1000)
+        const textLength = text.innerHTML
+        for (let i=0; i<textLength.length; i++) {
+            text.innerHTML = text.innerHTML.slice(0, -1)
+            await time.sleep(50)
+        }
+        await time.sleep(400)
     }
 }
