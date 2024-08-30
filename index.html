@@ -97,23 +97,26 @@
             </div>
             <div class="break"></div>
             <div class="break"></div>
-            <div class="contact-container">
+            <form class="contact-container" id="contactForm">
                 <div>
                     <div class="label">Name</div>
-                    <input type="text" autocomplete="off" spellcheck="false">
+                    <input type="text" name="name" autocomplete="off" spellcheck="false" required>
                 </div>
                 <div>
                     <div class="label">Email</div>
-                    <input type="text" autocomplete="off" spellcheck="false">
+                    <input type="text" name="email" autocomplete="off" spellcheck="false" required>
                 </div>
                 <div>
                     <div class="label">Describe your project</div>
-                    <textarea spellcheck="false"></textarea>
+                    <textarea name="message" spellcheck="false" required></textarea>
                 </div>
                 <div class="centered-vertically">
-                    <button>Submit</button>
+                    <button id="contactSubmitButton" onclick="submitContactForm(event)">
+                        <span id="contactSubmitText">Submit</span>
+                    </button>
                 </div>
-            </div>
+            </form>
         </div>
+        <div id="toast" class="toast"></div>
     </body>
 </html>
