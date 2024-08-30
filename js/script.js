@@ -82,3 +82,57 @@ async function renderTypewriter() {
         await time.sleep(400)
     }
 }
+
+async function submitContactForm(event) {
+    event.preventDefault()
+    
+    // Get the form data
+    const form = document.getElementById("contactForm");
+    const formData = new FormData(form);
+
+    try {
+        // Send a POST request to the Flask server
+        const response = await fetch('http://localhost:5000/submit-form', {
+            method: 'POST',
+            body: formData
+        }).catch(error => {
+            console.log('Error:', error);
+        });
+
+        // Parse the response
+        const result = await response.json();
+
+        // Handle the response (e.g., show a message)
+        if (result.status === "success") {
+            showToast("Submission received! We'll get back to you shortly.", "success");
+            form.reset(); // Optionally reset the form after successful submission
+        } else {
+            showToast("Error: " + result.message, "error");
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        showToast("An error occurred while submitting the form. Please try again later.", "error");
+    }
+}
+
+function showToast(message, type) {
+    const toast = document.getElementById("toast");
+    toast.className = "toast show";
+    toast.textContent = message;
+
+    if (type === "success") {
+        toast.style.backgroundColor = "#4CAF50"; // Green for success
+    } else {
+        toast.style.backgroundColor = "#f44336"; // Red for error
+    }
+
+    // Hide the toast after 3 seconds
+    setTimeout(() => {
+        toast.className = 'toast hide';
+    }, 3000);
+
+    // Clear the toast
+    setTimeout(() => {
+        toast.className = 'toast';
+    }, 4000);
+}
