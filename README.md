@@ -1,1 +1,1 @@
-# scohlar-scrape-website
+# scholar-scrape-website

@@ -60,8 +60,10 @@ async function renderTypewriter() {
     const text = dquery("#typewriterText")
     phrases = [
         "students",
-        "researchers",
-        "interns"
+        "learners",
+        "scholars",
+        "interns",
+        "mentors"
     ]
 
     let i = 0
