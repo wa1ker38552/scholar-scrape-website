@@ -119,7 +119,7 @@ button:hover {
 }
 
 .text-highlight {
-    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -278,7 +278,7 @@ button:hover {
     display: inline-block;
     width: auto;
     text-align: left;
-    color: rgb(255, 255, 255);
+    font-weight: 500;
 }
 
 .caret {
