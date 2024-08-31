@@ -60,7 +60,8 @@ button:hover {
 }
 
 .navigation {
-    position: fixed;
+    position: static;
+    background-color: var(--background);
     padding: 1rem;
     box-sizing: border-box;
     width: 100vw;
@@ -273,22 +274,14 @@ button:hover {
     transform: translateY(20px); 
 }
 
-.typewriter-container {
-    position: relative;
-    display: inline-block;
-}
-
 #typewriterText {
     display: inline-block;
-    min-width: 150px;
+    width: auto;
     text-align: left;
-    color: var(--accent-primary);
+    color: rgb(255, 255, 255);
 }
 
 .caret {
-    position: absolute;
-    right: 0;
-    top: 0;
     display: inline-block;
     width: 1px;
     background-color: #fff; /* Or any color that matches your design */
