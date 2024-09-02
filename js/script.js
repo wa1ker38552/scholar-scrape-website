@@ -60,26 +60,35 @@ async function renderTypewriter() {
     const text = dquery("#typewriterText")
     phrases = [
         "students",
-        "researchers",
-        "interns"
+        "learners",
+        "scholars",
+        "interns",
+        "mentors"
     ]
 
     let i = 0
-    while (1) {
-        text.innerHTML = ""
-        word = phrases[i%3] // use mod instead of random to avoid succesive words
-        i++
+    while (true) {
+        text.innerHTML = "";
+        let word = phrases[i % phrases.length];
+        i++;
+
         for (const char of word) {
-            text.innerHTML += char
-            await time.sleep(50)
+            text.innerHTML += char;
+            
+            await new Promise(resolve => setTimeout(resolve, 50));
         }
-        await time.sleep(1000)
-        const textLength = text.innerHTML
-        for (let i=0; i<textLength.length; i++) {
-            text.innerHTML = text.innerHTML.slice(0, -1)
-            await time.sleep(50)
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        // Remove characters
+        const originalContent = text.innerHTML;
+        for (let j = 0; j < originalContent.length; j++) {
+            text.innerHTML = text.innerHTML.slice(0, -1);
+
+            await new Promise(resolve => setTimeout(resolve, 50));
         }
-        await time.sleep(400)
+
+        await new Promise(resolve => setTimeout(resolve, 400));
     }
 }
 

@@ -60,7 +60,8 @@ button:hover {
 }
 
 .navigation {
-    position: fixed;
+    position: static;
+    background-color: var(--background);
     padding: 1rem;
     box-sizing: border-box;
     width: 100vw;
@@ -118,7 +119,7 @@ button:hover {
 }
 
 .text-highlight {
-    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -271,4 +272,23 @@ button:hover {
     visibility: hidden;
     opacity: 0;
     transform: translateY(20px); 
+}
+
+#typewriterText {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    font-weight: 500;
+}
+
+.caret {
+    display: inline-block;
+    width: 1px;
+    background-color: #fff; /* Or any color that matches your design */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
 }
