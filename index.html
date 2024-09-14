@@ -14,6 +14,7 @@
         <script src="https://lib.cadenchau.com/lib.js"></script>
         <script src="data/websites.js"></script>
         <script src="js/script.js"></script>
+        <script src="js/recaptcha.js"></script>
         <script>
             window.history.scrollRestoration = 'manual' // reset scroll state on-load
             // prevent automatic scroll when #about toggled
@@ -111,6 +112,7 @@
                     <div class="label">Describe your project</div>
                     <textarea name="message" spellcheck="false" required></textarea>
                 </div>
+                <div id="div-recaptcha" class="g-recaptcha" data-sitekey="6LcZi0AqAAAAAF2_KgPTc1lVjwBul67tA96R8Xq3"></div>
                 <div class="centered-vertically">
                     <button id="contactSubmitButton" onclick="submitContactForm(event)">
                         <span id="contactSubmitText">Submit</span>
@@ -119,5 +121,6 @@
             </form>
         </div>
         <div id="toast" class="toast"></div>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit" async defer></script>
     </body>
 </html>

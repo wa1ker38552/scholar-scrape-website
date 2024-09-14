@@ -99,6 +99,20 @@ async function submitContactForm(event) {
     const form = document.getElementById("contactForm");
     const formData = new FormData(form);
 
+    if(!formData.get("name") || !formData.get("email") || !formData.get("message")) {
+        showToast("Please fill in all the required fields.", "error");
+        return;
+    }
+
+    // Get the reCAPTCHA response token
+    if (!recaptchaResponse) {
+        showToast("Please complete the reCAPTCHA verification.", "error");
+        return;
+    }
+    
+     // Add the reCAPTCHA response token to the form data
+     formData.append('g-recaptcha-response', recaptchaResponse);
+
     try {
         // Send a POST request to the Flask server
         const response = await fetch('http://localhost:5000/submit-form', {
