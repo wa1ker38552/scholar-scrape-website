@@ -98,9 +98,16 @@ async function submitContactForm(event) {
     // Get the form data
     const form = document.getElementById("contactForm");
     const formData = new FormData(form);
+    const termsCheckbox = document.getElementById("termsCheckbox");
 
     if(!formData.get("name") || !formData.get("email") || !formData.get("message")) {
         showToast("Please fill in all the required fields.", "error");
+        return;
+    }
+
+    // Check if the terms checkbox is checked
+    if (!termsCheckbox.checked) {
+        showToast("Please agree to the Terms and Conditions and Privacy Policy.", "error");
         return;
     }
 

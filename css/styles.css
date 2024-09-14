@@ -4,8 +4,10 @@
 @import url('components/navigation.css');
 @import url('components/terminal.css');
 @import url('components/typewriter.css');
+
 @import url('shared/toast.css');
 @import url('shared/buttons.css');
+@import url('shared/modals.css');
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -99,7 +101,7 @@ h4 {
 }
 
 .label {
-    color: var(--accent-slight-dark);
+    color: var(--accent-secondary);
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }

@@ -15,6 +15,7 @@
         <script src="data/websites.js"></script>
         <script src="js/script.js"></script>
         <script src="js/recaptcha.js"></script>
+        <script src="js/modals.js"></script>
         <script>
             window.history.scrollRestoration = 'manual' // reset scroll state on-load
             // prevent automatic scroll when #about toggled
@@ -113,11 +114,11 @@
                     <textarea name="message" spellcheck="false" required></textarea>
                 </div>
                 <div class="terms-and-conditions">
-                    <input type="checkbox" id="termsCheckbox" required>
-                    <div>I agree with the 
-                        <a href="terms.html" target="_blank">Terms and Conditions</a> and 
-                        <a href="privacy.html" target="_blank">Privacy Policy</a>
-                    </div>
+                    <input type="checkbox" id="termsCheckbox" style="width:auto" required>
+                    <label for="terms">I agree to the 
+                        <a href="#" onclick="openModal('termsModal'); return false;" style="color: var(--accent-primary)">Terms and Conditions</a> and 
+                        <a href="#" onclick="openModal('privacyModal'); return false;" style="color: var(--accent-primary)">Privacy Policy</a>
+                    </label>
                 </div>
                 <div id="div-recaptcha" class="g-recaptcha" data-sitekey="6LcZi0AqAAAAAF2_KgPTc1lVjwBul67tA96R8Xq3"></div>
                 <div class="centered-vertically">
@@ -128,6 +129,23 @@
             </form>
         </div>
         <div id="toast" class="toast"></div>
+        <!-- Terms and Conditions Modal -->
+        <div id="termsModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Terms and Conditions</h2>
+            <p>Lorem Ipsum Dolor </p>
+            </div>
+        </div>
+        
+        <!-- Privacy Policy Modal -->
+        <div id="privacyModal" class="modal">
+            <div class="modal-content">
+            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>Lorem Ipsum Dolor </p>
+            </div>
+        </div>
         <script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit" async defer></script>
     </body>
 </html>

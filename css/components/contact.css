@@ -36,8 +36,10 @@
 
 .terms-and-conditions {
     font-family: "Inter";
-    font-weight: 300;
+    font-weight: 3=00;
     font-size: 0.8rem;
-    color: var(--text-dim);
+    color: var(--accent-secondary);
     display: flex;
+    align-items: center;
+    justify-content: left;
 }
