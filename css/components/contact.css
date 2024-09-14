@@ -1,0 +1,43 @@
+#contact {
+    background: var(--background);
+    position: relative;
+}
+
+.contact-container {
+    display: grid;
+    grid-gap: 1rem;
+    width: 30rem;
+}
+
+.contact-container input, textarea {
+    width: 100%;
+    outline: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--accent-dark);
+    border-radius: 5px;
+    background: transparent;
+    resize: none;
+    color: var(--text-dim);
+    font-size: 1rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+.contact-container input:focus, .contact-container textarea:focus {
+    border-color: var(--accent-secondary);
+}
+
+.contact-container textarea {
+    height: 10rem;
+}
+
+.terms-and-conditions {
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    display: flex;
+}

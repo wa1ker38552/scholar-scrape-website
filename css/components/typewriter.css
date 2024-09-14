@@ -1,0 +1,18 @@
+#typewriterText {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    font-weight: 500;
+}
+
+.caret {
+    display: inline-block;
+    width: 1px;
+    background-color: #fff; /* Or any color that matches your design */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}

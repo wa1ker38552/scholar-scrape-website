@@ -1,0 +1,106 @@
+@import url('components/contact.css');
+@import url('components/home.css');
+@import url('components/about.css');
+@import url('components/navigation.css');
+@import url('components/terminal.css');
+@import url('components/typewriter.css');
+@import url('shared/toast.css');
+@import url('shared/buttons.css');
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-slight-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Geist Sans";
+    color: var(--text);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-family: "Inter";
+    font-weight: 400;
+    color: var(--text-dim);
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.hero-text-container {
+    width: 30rem;
+    text-align: center;
+}
+
+.secondary-font {
+    font-family: "Inter";
+    font-weight: 300;
+}
+
+.text-highlight {
+    background: linear-gradient(to right, var(--accent-secondary), var(--accent-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text-container button {
+    font-size: 1.2rem;
+}
+
+.blurb-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.blurb-item {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--accent-dark);
+    background-image: linear-gradient(to bottom right, transparent, var(--accent-dark));
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 15rem;
+    height: auto;
+}
+
+.blurb-item h4 {
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.label {
+    color: var(--accent-slight-dark);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+

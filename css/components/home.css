@@ -1,0 +1,9 @@
+#home {
+    background: radial-gradient(circle at bottom, var(--accent-dark) 5%, var(--background) 80%);
+}
+
+#home.content {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+}

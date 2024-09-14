@@ -1,0 +1,16 @@
+button {
+    border-style: none;
+    border-width: 1px;
+    border-color: transparent;
+    color: var(--background);
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-image: linear-gradient(to top right, var(--accent-slight-dark), var(--accent-secondary));
+}
+
+button:hover {
+    background-image: linear-gradient(to top right, var(--accent-slight-dark), var(--accent-secondary) 30%);
+}

@@ -1,0 +1,35 @@
+.terminal {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgb(29, 29, 29);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 35rem;
+}
+
+.terminal-header {
+    padding: 0.4rem;
+    box-sizing: border-box;
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: rgb(29, 29, 29);
+    gap: 0.3rem;
+}
+
+.terminal-header div {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+
+#terminalContent {
+    height: 30rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-family: "Fira Code";
+    font-size: 0.8rem;
+    color: white;
+    overflow: hidden;
+}
