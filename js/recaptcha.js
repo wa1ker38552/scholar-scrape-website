@@ -7,5 +7,4 @@ function onLoadCallback() {
 
 function successCallback(response) {
     recaptchaResponse = response;
-    console.log(recaptchaResponse);
 }
