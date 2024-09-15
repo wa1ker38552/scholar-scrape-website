@@ -15,10 +15,10 @@
 
 /* Modal Content */
 .modal-content {
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: var(--accent-dark);
     margin: 10% auto; /* 10% from the top and centered */
-    padding: 20px;
+    padding: 1rem;
     border: 1px solid var(--accent-secondary);
     width: 80%; /* Could be more or less, depending on screen size */
     max-width: 600px;
@@ -26,7 +26,7 @@
   
 /* Close button (X) */
 .close {
-    color: #aaa;
+    color: var(--accent-primary);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -34,7 +34,7 @@
   
 .close:hover,
 .close:focus {
-    color: black;
+    color: var(--accent-secondary);
     text-decoration: none;
     cursor: pointer;
 }

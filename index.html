@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>ScholarScrape</title>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <link rel="icon" href="assets/logo-black.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,10 +18,10 @@
         <script src="js/recaptcha.js"></script>
         <script src="js/modals.js"></script>
         <script>
-            window.history.scrollRestoration = 'manual' // reset scroll state on-load
+            // window.history.scrollRestoration = 'manual' // reset scroll state on-load
             // prevent automatic scroll when #about toggled
             window.onload = function() {
-                dquery('a[href="#home"]').addEventListener('click', function(event) {
+                /*dquery('a[href="#home"]').addEventListener('click', function(event) {
                     event.preventDefault()
                     dquery('#home').scrollIntoView({behavior: 'smooth'})
                 })
@@ -32,6 +33,10 @@
                     event.preventDefault()
                     dquery('#contact').scrollIntoView({behavior: 'smooth'})
                 })
+                dquery('a[href="#pricing"]').addEventListener('click', function(event) {
+                    event.preventDefault()
+                    dquery('#pricing').scrollIntoView({behavior: 'smooth'})
+                })*/
                 
                 renderTerminal()
                 renderTypewriter()
@@ -41,10 +46,11 @@
     <body>
         <div class="navigation centered-vertically">
             <img src="assets/scholar-scrape.png">
-            <h2>ScholarScrape</h2>
+            <a href="/" style="text-decoration: none; color: white;"><h2>ScholarScrape</h2></a>
             <div class="centered-vertically navigation-right">
                 <a class="navigation-item" href="#home">Home</a>
                 <a class="navigation-item" href="#about">About</a>
+                <a class="navigation-item" href="#pricing">Pricing</a>
                 <a class="navigation-item" href="#contact">Contact</a>
             </div>
         </div>
@@ -90,6 +96,99 @@
                     <h3>Customizable</h3>
                     <div class="gap"></div>
                     <h4>We offer highly customizable solutions tailored to the unique needs of academic research, whether it be for a small-scale study or a large, interdisciplinary project.</h4>
+                </div>
+            </div>
+        </div>
+        <div class="content centered-children" id="pricing">
+            <div class="hero-text-container">
+                <h2>Pricing</h2>
+                <h4>Our pricing is flexible and and can vary depending on your project size and complexity</h4>
+            </div>
+            <div class="break"></div>
+            <div class="break"></div>
+            <div class="break"></div>
+            <div class="pricing-container">
+                <div class="pricing-item">
+                    <h3>Standard</h3>
+                    <div class="gap"></div>
+                    <div class="pricing-list">
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Standard scraping</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>One source</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>One month retention</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Shared proxies</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Dedicated support</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Delivery through file sharing</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <h3>Developer</h3>
+                    <div class="gap"></div>
+                    <div class="pricing-list">
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Captcha solving</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Multiple sources</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Three month retention</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Premium proxies</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>More delivery options</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <h3>Enterprise</h3>
+                    <div class="gap"></div>
+                    <div class="pricing-list">
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Customized to your needs</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Unlimited proxies</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Unlimited captchas</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Shared proxies</h4>
+                        </div>
+                        <div class="centered-vertically">
+                            <img src="assets/icon_check.png">
+                            <h4>Custom delivery</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

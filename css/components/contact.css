@@ -43,3 +43,11 @@
     align-items: center;
     justify-content: left;
 }
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+}

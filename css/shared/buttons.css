@@ -8,6 +8,7 @@ button {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    box-sizing: border-box;
     background-image: linear-gradient(to top right, var(--accent-slight-dark), var(--accent-secondary));
 }
 
