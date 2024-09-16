@@ -1,12 +1,11 @@
 .navigation {
     position: fixed;
-    background-color: var(--background);
     padding: 1rem;
     box-sizing: border-box;
     width: 100vw;
     z-index: 9999;
     gap: 0.5rem;
-    background: transparent;
+    background-image: linear-gradient(var(--background), transparent);
 }
 
 .navigation h2 {
