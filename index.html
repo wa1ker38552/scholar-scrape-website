@@ -18,23 +18,23 @@
         <script src="js/recaptcha.js"></script>
         <script src="js/modals.js"></script>
         <script>
-            // window.history.scrollRestoration = 'manual' // reset scroll state on-load
+            window.history.scrollRestoration = 'manual' // reset scroll state on-load
             // prevent automatic scroll when #about toggled
             window.onload = function() {
                 dquery('a[href="#home"]').addEventListener('click', function(event) {
-                    event.preventDefault()
+                    //event.preventDefault()
                     dquery('#home').scrollIntoView({behavior: 'smooth'})
                 })
                 dquery('a[href="#about"]').addEventListener('click', function(event) {
-                    event.preventDefault()
+                    //event.preventDefault()
                     dquery('#about').scrollIntoView({behavior: 'smooth'})
                 })
                 dquery('a[href="#contact"]').addEventListener('click', function(event) {
-                    event.preventDefault()
+                    //event.preventDefault()
                     dquery('#contact').scrollIntoView({behavior: 'smooth'})
                 })
                 dquery('a[href="#pricing"]').addEventListener('click', function(event) {
-                    event.preventDefault()
+                    //event.preventDefault()
                     dquery('#pricing').scrollIntoView({behavior: 'smooth'})
                 })
                 

@@ -26,10 +26,6 @@
     background: var(--accent-slight-dark);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: "Geist Sans";
     color: var(--text);

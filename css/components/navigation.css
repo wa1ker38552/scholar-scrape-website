@@ -1,11 +1,12 @@
 .navigation {
-    position: static;
+    position: fixed;
     background-color: var(--background);
     padding: 1rem;
     box-sizing: border-box;
     width: 100vw;
     z-index: 9999;
     gap: 0.5rem;
+    background: transparent;
 }
 
 .navigation h2 {
