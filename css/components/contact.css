@@ -8,8 +8,13 @@
     overflow: auto;
 }
 
-.modal-content::-webkit-scrollbar {
-    display: none;
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--accent-slight-dark);
+    border-radius: 5px;
 }
 
 .contact-container {
