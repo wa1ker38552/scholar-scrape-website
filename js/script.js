@@ -122,7 +122,7 @@ async function submitContactForm(event) {
 
     try {
         // Send a POST request to the Flask server
-        const response = await fetch('https://154.53.63.206:5000/submit-form', {
+        const response = await fetch('https://server.scholarscrape.com/submit-form', {
             method: 'POST',
             body: formData
         }).catch(error => {
