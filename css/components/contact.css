@@ -65,3 +65,9 @@
     height: 25px;
     width: 25px;
 }
+
+
+.disable-submit {
+    filter: grayscale(1);
+    cursor: not-allowed;
+}

@@ -94,7 +94,7 @@ async function renderTypewriter() {
 
 async function submitContactForm(event) {
     event.preventDefault()
-    
+    dquery("#contactSubmitButton").classList.add("disable-submit")
     // Get the form data
     const form = document.getElementById("contactForm");
     const formData = new FormData(form);
@@ -136,12 +136,14 @@ async function submitContactForm(event) {
         if (result.status === "success") {
             showToast("Submission received! We'll get back to you shortly.", "success");
             form.reset(); // Optionally reset the form after successful submission
+            dquery("#contactSubmitButton").classList.remove("disable-submit")
         } else {
             showToast("Error: " + result.message, "error");
         }
     } catch (error) {
         console.error('Error:', error);
         showToast("An error occurred while submitting the form. Please try again later.", "error");
+        dquery("#contactSubmitButton").classList.remove("disable-submit")
     }
 }
 
