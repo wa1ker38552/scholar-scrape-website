@@ -1,3 +1,5 @@
+var currentlySubmitting = false
+
 async function renderTerminal() {
     const parent = dquery("#terminalContent")
     // const websites = await loadWebsites()
@@ -94,6 +96,8 @@ async function renderTypewriter() {
 
 async function submitContactForm(event) {
     event.preventDefault()
+    if (currentlySubmitting) {return}
+    currentlySubmitting = true
     dquery("#contactSubmitButton").classList.add("disable-submit")
     // Get the form data
     const form = document.getElementById("contactForm");
@@ -102,18 +106,24 @@ async function submitContactForm(event) {
 
     if(!formData.get("name") || !formData.get("email") || !formData.get("message")) {
         showToast("Please fill in all the required fields.", "error");
+        dquery("#contactSubmitButton").classList.remove("disable-submit")
+        currentlySubmitting = false
         return;
     }
 
     // Check if the terms checkbox is checked
     if (!termsCheckbox.checked) {
         showToast("Please agree to the Terms and Conditions and Privacy Policy.", "error");
+        dquery("#contactSubmitButton").classList.remove("disable-submit")
+        currentlySubmitting = false
         return;
     }
 
     // Get the reCAPTCHA response token
     if (!recaptchaResponse) {
         showToast("Please complete the reCAPTCHA verification.", "error");
+        dquery("#contactSubmitButton").classList.remove("disable-submit")
+        currentlySubmitting = false
         return;
     }
     
@@ -137,13 +147,17 @@ async function submitContactForm(event) {
             showToast("Submission received! We'll get back to you shortly.", "success");
             form.reset(); // Optionally reset the form after successful submission
             dquery("#contactSubmitButton").classList.remove("disable-submit")
+            currentlySubmitting = false
         } else {
             showToast("Error: " + result.message, "error");
+            dquery("#contactSubmitButton").classList.remove("disable-submit")
+            currentlySubmitting = false
         }
     } catch (error) {
         console.error('Error:', error);
         showToast("An error occurred while submitting the form. Please try again later.", "error");
         dquery("#contactSubmitButton").classList.remove("disable-submit")
+        currentlySubmitting = false
     }
 }
 
