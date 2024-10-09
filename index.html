@@ -22,6 +22,9 @@
             window.history.scrollRestoration = 'manual' // reset scroll state on-load
             // prevent automatic scroll when #about toggled
             window.onload = function() {
+                const container = dquery('.pricing-container');
+                container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+
                 dquery('a[href="#home"]').addEventListener('click', function(event) {
                     //event.preventDefault()
                     dquery('#home').scrollIntoView({behavior: 'smooth'})
@@ -86,17 +89,17 @@
                 <div class="blurb-item">
                     <h3>Research-Focused</h3>
                     <div class="gap"></div>
-                    <h4>Our primary focus is on serving scholars, researchers, and students. We understand the specific data needs of academic projects, whether it’s for gathering sources for a literature review, compiling datasets for a thesis, or tracking research trends.</h4>
+                    <h4>Our primary focus is on serving scholars, researchers, and students.</h4>
                 </div>
                 <div class="blurb-item">
                     <h3>Ethical</h3>
                     <div class="gap"></div>
-                    <h4>We prioritize ethical web scraping practices, ensuring compliance with academic standards and legal requirements. We understand the importance of academic integrity and work within the boundaries of what’s permissible in scholarly research.</h4>
+                    <h4>We prioritize ethical web scraping practices, ensuring compliance with academic standards and legal requirements.</h4>
                 </div>
                 <div class="blurb-item">
                     <h3>Customizable</h3>
                     <div class="gap"></div>
-                    <h4>We offer highly customizable solutions tailored to the unique needs of academic research, whether it be for a small-scale study or a large, interdisciplinary project.</h4>
+                    <h4>We offer highly customizable solutions tailored to the unique needs of academic research.</h4>
                 </div>
             </div>
         </div>

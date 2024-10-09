@@ -103,3 +103,55 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+
+@media only screen and (max-width: 1200px) {
+    #home {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .hero-text-container {
+        width: 90vw;
+    }
+
+    .terminal {
+        display: none;
+    }
+
+    .navigation {
+        position: relative !important;
+        justify-content: left;
+        background: black !important;
+    }
+
+    .navigation-right {
+        position: absolute !important;
+        top: 4rem !important;
+        left: 1rem !important; 
+    }
+
+    .blurb-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pricing-container {
+        width: 90vw;
+        overflow-x: auto;
+        overflow-y: visible;
+        height: 50vh;
+        padding-top: 2rem;
+    }
+
+    .pricing-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pricing-item {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    #contactForm {
+        width: 90vw !important;
+    }
+}
